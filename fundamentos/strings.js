@@ -17,7 +17,7 @@ console.log(escola.substring(0, 3))  //Desta forma, a função "substring" retor
 //As três sentenças abaixo fazem a mesma coisa de formas diferentes
 console.log('Escola '.concat(escola).concat("!"))
 console.log("Escola " + escola + "!")
-console.log(`Escola ${escola}!`)
+console.log(`Escola ${escola}!`)  //Esta forma se chama "TEMPLATE STRINGS"
 
 
 console.log(escola.replace(3, 'e'))  //A função "replace" substitui o caracter do indice selecionado pelo novo caracter informado.

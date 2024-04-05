@@ -9,6 +9,9 @@ function soBoaNoticia(nota) {
 soBoaNoticia(8.1)  //verdadeiro
 soBoaNoticia(6.1)  //falso
 
+
+//No JS é possível também construir estruturas de controle IF sem ser com operações relacionais, mas apenas com valores absolutos, como pode ser visto no exemplo abaixo
+
 function seForVerdadeEuFalo(valor) {
     if(valor) {
         console.log(`É verdade... ${valor}`)

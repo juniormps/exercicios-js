@@ -1,5 +1,6 @@
 //Estrutura de Repetição - "WHILE" (ENQUANTO)
 
+//É UMA REPETIÇÃO COM TESTE NO INÍCIO
 //mais indicada para quando o número de repetições for indeterminado
 
 function getInteiroAleatorioEntre(min, max) {

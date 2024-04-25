@@ -1,3 +1,5 @@
+//Função que retorna uma saudação ao usuário.
+
 function saudacao(nome) {
     console.log(`Olá, ${nome}!`)
 }

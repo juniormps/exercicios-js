@@ -10,6 +10,8 @@ function numerosEindicesPares(array) {
     return resultado
 }
 
-const valores = [2, 44, 3, 8, 9, 15, 14, 10, 55, 11, 29, 16, 18]
+const valores1 = [2, 44, 3, 8, 9, 15, 14, 10, 55, 11, 29, 16, 18]
+const valores2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const valores3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-console.log(numerosEindicesPares(valores))
+console.log(numerosEindicesPares(valores1))

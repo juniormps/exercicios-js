@@ -10,7 +10,7 @@ const pessoa = {
     nome: 'Marcio',
     ano_nascimento: 1987,
     naturalidade: 'RJ',
-    nacionalidade: 'Brasileiro'
+    nacionalidade: 'Brasileiro'  
 }
 
 console.log(removerAtributo(pessoa, pessoa.ano_nascimento))

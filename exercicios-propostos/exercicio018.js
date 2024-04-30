@@ -2,8 +2,8 @@
 
 function despesasTotais(despesas) {
     let soma =  0
-    for(let i in despesas) {
-        soma += despesas[i].preco
+    for(item of despesas) {
+        soma += item.preco
     }
     return soma
 }

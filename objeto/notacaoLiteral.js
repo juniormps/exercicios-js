@@ -27,7 +27,7 @@ console.log(obj4)
 
 
 
-
+//atributo do tipo função
 const obj5 = {
     funcao1: function() {  //Forma antiga
         //...

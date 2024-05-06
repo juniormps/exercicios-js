@@ -1,6 +1,6 @@
 //Formas de criar OBJETOS
 
-//Forma literal
+//Usando a notação literal 
 const obj1 = {}
 console.log(obj1)
 
@@ -14,7 +14,7 @@ console.log(obj2)
 
 //Criando a própria função construtora
 function Produto(nome, preco, desc) {
-    this.nome = nome
+    this.nome = nome                    
     this.getPrecoComDesconto = () => {
         return preco * (1 - desc)
     }
@@ -24,6 +24,9 @@ const p1 = new Produto('Caneca', 7.99, 0.15)
 const p2 = new Produto('Notebook', 2998.99, 0.25)
 
 console.log(p1.getPrecoComDesconto(), p2.getPrecoComDesconto())
+console.log(p1.nome, p2.nome)
+
+//OBS.: o "this" torna os atributos públicos, ou seja, visíveis/alteráveis fora da função "Produto".
 
 
 //Com uma função FACTORY

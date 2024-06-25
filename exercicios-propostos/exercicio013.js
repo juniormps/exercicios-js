@@ -14,3 +14,23 @@ const elementos1 = ['JavaScript', 1, 365, 'Junior', '1987', 36, 'Brasil', 1958]
 const elementos2 = ['Alda', 'Sabrina', 'Marcio', 'Guto', 'Samuel', 'José']
 
 console.log(filtrarNumeros(elementos1))
+
+
+//Também poderia ser feito como abaixo: (ficaria até melhor)
+
+/*
+function filtrarNumeros(valores) {
+    let novoElementos = []
+    for(let item of valores) {
+        if (typeof item == "number") {
+            novoElementos.push(item)
+        }
+    }
+    return novoElementos
+}
+
+const elementos1 = ['JavaScript', 1, 365, 'Junior', '1987', 36, 'Brasil', 1958]
+const elementos2 = ['Alda', 'Sabrina', 'Marcio', 'Guto', 'Samuel', 'José']
+
+console.log(filtrarNumeros(elementos1))
+*/

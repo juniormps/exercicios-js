@@ -13,6 +13,6 @@ const pessoa = {
     nacionalidade: 'Brasileiro'  
 }
 
-console.log(removerAtributo(pessoa, pessoa.ano_nascimento))
+console.log(removerAtributo(pessoa, 'ano_nascimento'))
 
 //A CHAMADA DA FUNÇÃO NÃO ESTÁ FUNCIONANDO

@@ -16,3 +16,20 @@ const cliente = {
 }
 
 console.log(objetoParaArray(cliente))
+
+
+//PODERIA TAMBÉM SER FEITO COMO ABAIXO:
+/*
+function objetoParaArray(objeto) {
+    return Object.entries(objeto)
+}
+
+const cliente = {
+    nome: 'Samuel',
+    idade: 10,
+    ano_nascimento: 2014,
+    nacionalidade: 'Brasileiro'
+}
+
+console.log(objetoParaArray(cliente))
+*/

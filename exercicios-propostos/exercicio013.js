@@ -34,3 +34,17 @@ const elementos2 = ['Alda', 'Sabrina', 'Marcio', 'Guto', 'Samuel', 'José']
 
 console.log(filtrarNumeros(elementos1))
 */
+
+
+//Ou como abaixo:
+
+/*
+function filtrarNumeros(array) {
+    return array.filter(item => typeof item === "number")
+}
+
+const elementos1 = ['JavaScript', 1, 365, 'Junior', '1987', 36, 'Brasil', 1958]
+const elementos2 = ['Alda', 'Sabrina', 'Marcio', 'Guto', 'Samuel', 'José']
+
+console.log(filtrarNumeros(elementos1))
+*/

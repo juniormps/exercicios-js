@@ -7,3 +7,32 @@ function calcularMedia(numeros) {
 const numeros = [1, 6, 8, 14, 36, 5, 10, 150]
 
 console.log(calcularMedia(numeros))
+
+
+//TAMBÉM PODERIA SER FEITO DESTA FORMA:
+/*
+function calcularMedia(numeros) {
+    let soma = 0
+    for (let elemento of numeros) soma += elemento
+    return soma / numeros.length
+}
+
+const numeros = [1, 6, 8, 14, 36, 5, 10, 150]
+
+console.log(calcularMedia(numeros))
+*/
+
+
+
+//OU ASSIM:
+/*
+function calcularMedia(numeros) {
+    let soma = 0
+    numeros.forEach(elemento => soma += elemento)
+    return soma / numeros.length
+}
+
+const numeros = [1, 6, 8, 14, 36, 5, 10, 150]
+
+console.log(calcularMedia(numeros))
+*/

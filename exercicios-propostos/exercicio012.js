@@ -15,4 +15,4 @@ const pessoa = {
 
 console.log(removerAtributo(pessoa, 'ano_nascimento'))
 
-//A CHAMADA DA FUNÇÃO NÃO ESTÁ FUNCIONANDO
+//ATENÇÃO: O SEGUNDO PARÂMETRO DEVE SER PASSADO COMO UMA STRING, COMO ACIMA.

@@ -1,5 +1,7 @@
 //HERANÇA
 
+//É o princípio da orientação à objeto que faz com que um objeto herde atributos e comportamentos de seu objeto pai (Protótipo)
+
 //O objetivo da herança é a REUTILIZAÇÃO DE CÓDIGO sem que seja preciso copiar e colar.
 
 //Em JavaScript, a herança é baseada em protótipos (prototypes)

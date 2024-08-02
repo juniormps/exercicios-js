@@ -20,6 +20,17 @@ const escola = [{
     }]
 }]
 
+const todosAlunos = escola.flatMap(turma => turma.alunos)
+const totalNotas = todosAlunos.reduce((acumulador, aluno) => acumulador + aluno.nota, 0)
+const mediaNotas = totalNotas / todosAlunos.length
+
+console.log(mediaNotas)
+
+
+
+
+
+/*
 const getNotaDoAluno = aluno => aluno.nota
 const getNotasDaTurma = turma => turma.alunos.map(getNotaDoAluno)
 
@@ -34,3 +45,4 @@ Array.prototype.flatMap = function(callback) {
 
 const notas2 = escola.flatMap(getNotasDaTurma)
 console.log(notas2)
+*/

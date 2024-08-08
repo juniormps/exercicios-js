@@ -5,6 +5,30 @@
 
 function metricasPontuacao(listaString) {
     let pontuacoes = listaString.split(" ").map(Number);
+    
+    let maiorPontuacao = Math.max(...pontuacoes)
+    let piorPontuacao = Math.min(...pontuacoes)
+
+    let numRecordes = pontuacoes.filter(pontuacao => pontuacao == maiorPontuacao).length
+
+    let pioresJogos = pontuacoes
+        .map((pontuacao, indice) => pontuacao === piorPontuacao ? indice + 1 : -1)
+        .filter(indice => indice !== -1);
+
+    return [numRecordes, pioresJogos];
+}
+
+
+let pontuacoesFeitas = "10 20 20 8 25 3 0 30 1 30 0" 
+console.log(metricasPontuacao(pontuacoesFeitas))
+
+
+
+
+/* OUTRA SOLUÇÃO:
+
+function metricasPontuacao(listaString) {
+    let pontuacoes = listaString.split(" ").map(Number);
 
     let maiorPontuacao = pontuacoes[0];
     let piorPontuacao = pontuacoes[0];
@@ -28,3 +52,4 @@ function metricasPontuacao(listaString) {
 
 let pontuacoesFeitas = "10 20 20 8 25 3 0 30 1" 
 console.log(metricasPontuacao(pontuacoesFeitas))
+*/

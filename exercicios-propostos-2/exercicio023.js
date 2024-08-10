@@ -9,9 +9,22 @@ function Aluno(codigo, nome, nota1, nota2, nota3) {
 
     this.notas = [nota1, nota2, nota3].sort()
 
-    this.getMedia = notas => ((notas[0] * 3) + (notas[1] * 3) + (notas[2] * 4)) / (3 + 3 + 4)
+    this.getMedia = function() {
+        return ((this.notas[0] * 3) + (this.notas[1] * 3) + (this.notas[2] * 4)) / (3 + 3 + 4)
+    }
 
-    this.getResultadoFinal = media => media >= 5 ? "APROVADO" : "REPROVAO"
+    this.getResultadoFinal = function() {
+        return this.getMedia() >= 5 ? "APROVADO" : "REPROVAO"
+    }
+
+    this.imprimirDados = function() {
+        console.log(`Código do Aluno: ${this.codigo}`);
+        console.log(`Nome do Aluno: ${this.nome}`);
+        console.log(`Notas: ${this.nota1}, ${this.nota2}, ${this.nota3}`);
+        console.log(`Média Ponderada: ${this.getMedia().toFixed(2)}`);
+        console.log(`Resultado: ${this.getResultadoFinal()}`);
+        console.log('---------------------------');
+    }
 }
 
 const a1 = new Aluno(1001, 'Marcio Junior', 7, 8, 6)
@@ -20,5 +33,8 @@ const a3 = new Aluno(1003, 'José Rocha', 7, 6, 10)
 const a4 = new Aluno(1004, 'Malaquias Azevedo', 5, 4, 3)
 
 
-console.log(a1.getResultadoFinal(a1.getMedia(a1.notas)))
+a1.imprimirDados()
+a2.imprimirDados()
+a3.imprimirDados()
+a4.imprimirDados()
 

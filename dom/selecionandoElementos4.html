@@ -22,7 +22,37 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log() {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log()  //retorna os elementos "pais" do nó selecionado (elemento selecionado)
+        lista.childNodes.log()  //retorna os elementos "filhos" do nó selecionado (elemento selecionado)
+
+        //os métodos abaixo retornam uma Nodelist, porém consideram o "espaço" entre um elemento e outro como elemento.
+        const primeiro = lista.firstChild  //retorna o primeiro filho do elemento "lista"
+        primeiro.log()
+        primeiro.nextSibling.log()  //retorna o primeiro elemento irmão do elemento "primeiro"
+
+        const ultimo = lista.lastChild  //retorna último filho do elemento "lista"
+        ultimo.log()
+        ultimo.previousSibling.log()  //retorna o elemento irmão anterior ao elemento "ultimo"
+
+        //Ao contrário dos métodos acima, os métodos abaixo vêm como um "HTML Colection", porém, NÃO consideram o "espaço" entre um elemento e outro como elemento.
+        lista.children.log()
+        lista.firstElementChild.log()
+        lista.lastElementChild.log()
+        lista.parentNode.previousElementSibling.log()
+        lista.parentNode.nextElementSibling.log()
+
+        //A forma abaixo realiza a mesma tarefa que os métodos acima, porém de uma maneira mais simples e objetiva, sem precisar ficar navegando pelos elementos.
+        document.querySelectorAll('div ul li').log()
     </script>
 </body>
 

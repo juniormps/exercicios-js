@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Selecionar Elementos #01</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+
 <body class="conteudo exercicio">
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+    <script>
+        //com o "getElementById" ele retorna o elemento marcado com o "id"
+        document.getElementById('primeiro').classList.add('destaque')
+
+        //com o "getElementsByTagName" ele retorna uma lista de elementos (HTML Colections)
+        //O " Array.from(divs)" transforma a lista retornada pelo "getElementsByTagName" em um Array.
+        const divs = document.getElementsByTagName('div')  
+        Array.from(divs).forEach(e => e.classList.remove('destaque')) 
+
+        //Outra forma de transformar um "HTML Colections" em um array é utilizando o operador spread "..."
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        //com o "getElementsByClassName" ele também retorna uma lista de elementos (HTML Colections)
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for (let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
     </script>
 </body>
+
 </html>

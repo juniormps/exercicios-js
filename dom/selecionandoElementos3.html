@@ -10,7 +10,7 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         form input,
         form select,
         form button {
@@ -31,7 +31,14 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        console.log(document.forms)  //retorna todos os formulários
+        console.log(document.forms[0])  //retorna o primeiro formulário
+        console.log(document.getElementsByName('pesquisa'))  //o "getElementsByName" também retorna uma NodeList
+        console.log(document.pesquisa)  //retorna o elemento que possui o nome "pesquisa"
+        console.log(document.pesquisa.q)  //retorna o elemento com o nome "q" dentro do elemento "pesquisa"
+        document.pesquisa.q.value = 'Linux Brasil'  //altera o valor do imput
+        document.pesquisa.hl.value = 'en-us'  //altera o valor do campo "hl" (select)
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 

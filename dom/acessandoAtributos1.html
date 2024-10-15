@@ -15,7 +15,39 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        //Diferentes formas de acessar um atributo
+        const img = document.querySelector('img')
+
+        //a partir de uma "string" com o método "getAttribute"
+        console.log('getAttribute', img.getAttribute('src'))
+        
+        //Pelo nome do atributo
+        console.log('src', img.src)
+
+        //Usando a notação de colchetes e o nome do atributo
+        console.log('["src"]', img['src'])
+        
+        console.log('alt', img.alt)
+
+        //Acessando propriedades implícitas dos elementos
+        console.log('Elemento "img"...............')
+        console.log('NodeType', img.nodeType)
+        console.log('NodeName', img.nodeName)
+
+        //O "getAttribute" retorna o atributo, enquanto o "getAttributeNode" retorna o nó que representa o atributo
+        const src = img.getAttributeNode('src')
+        console.log('Atributo "src"...............')
+        console.log('NodeType', src.nodeType)
+        console.log('NodeName', src.nodeName)
+        console.log('NodeValue', src.nodeValue)
+
+        const link = document.querySelector('a')
+        console.log('Elemento "a"...............')
+        console.log('href', link.href)
+
+        //Acessando o nó filho de um elemento (um texto dentro de uma tag é considerado um nó)
+        console.log('firstChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo Texto'
     </script>
 </body>
 

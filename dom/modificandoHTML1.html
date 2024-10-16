@@ -9,7 +9,39 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')  //O método "createElement" cria um elemento HTML
+        div1.classList.add('destaque')  //adiciona uma classe
+        div1.innerHTML = 'Primeiro'  //adiciona ou modifica um conteúdo de uma tag
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')  //cria um atributo e adicion um valor a ele
+        div2.innerHTML = 'Segundo'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+        const div3 = document.createElement('div')
+
+        //O método "appendChild" adiciona um elemento (passado no parâmetro) dentro de outro (na posição de último filho)
+        div3.appendChild(p)  
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)
+
+        const texto = document.createTextNode('Antes...')  //Cria um nó de texto
+
+        //Outra forma de inserir um elemento dentro de outro com o método "insertBefore".
+        //O "primeiro parâmetro" é o elemento a ser inserido. O "segundo parâmetro" é a posição que será inserido dentro do elemento pai. O elemento pai é o "div3".
+        div3.insertBefore(texto, div3.childNodes[0])  
+
+        //O método "cloneNode" cria um clone de um elemento
+        //Com o parâmetro "true" a clonagem será profundo, ou seja, será clonado todos os nós filhos também.
+        //Com o parâmetro "false" a clonagem será apenas do elemento, sem os filhos
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        body.removeChild(div3) //remove um elemento
     </script>
 </body>
 

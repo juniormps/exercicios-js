@@ -20,10 +20,10 @@
         const lista = document.querySelector('div ul[destino="escritório"]')
         console.log('Elemento "ul"...............')
         console.log('childNodes', lista.childNodes)  //Pega os nós filhos
-        console.log('destino', lista.destino)
-        console.log('getAttribute', lista.getAttribute('destino'))
+        console.log('destino', lista.destino)  //Para acessar um atributo personalizado, NÃO serve assim (retornará undefined)
+        console.log('getAttribute', lista.getAttribute('destino'))  //este é o correto
 
-        //pesquisa se existe uma determinada propiedade dentro de um nó
+        //pesquisa se existe uma determinada propiedade (atributo) dentro de um nó
         console.log('hasAttribute', lista.hasAttribute('destino'))  
 
         //Altera o valor de um atributo de um elemento ou cria um novo
@@ -33,7 +33,7 @@
         //remove um atributo
         lista.removeAttribute('destino')
 
-        //Outra forma de acessar atributos personalizados
+        //Outra forma de acessar atributos personalizados, porém, o atributo precisa estar setado com o prefixo "data-".
         console.log(lista.dataset.urgencia)
         lista.dataset.urgencia = 4
         console.log(lista.getAttribute('data-urgencia'))

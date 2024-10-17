@@ -13,12 +13,12 @@
         const item = document.querySelector('div')
         item.style.position = 'absolute'
 
-        item.onmousemove = e => {
-            const item = e.target
+        item.onmousemove = event => {
+            const item = event.target
             item.style.cursor = 'move'
-            if (e.buttons) {
-                item.style.top = `${e.clientY - (item.clientHeight / 2)}px`
-                item.style.left = `${e.clientX - (item.clientWidth / 2)}px`
+            if (event.buttons) {
+                item.style.top = `${event.clientY - (item.clientHeight / 2)}px`
+                item.style.left = `${event.clientX - (item.clientWidth / 2)}px`
             }
         }
     </script>

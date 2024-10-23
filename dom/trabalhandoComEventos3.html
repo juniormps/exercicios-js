@@ -45,6 +45,7 @@
     </div>
     <div class="direita" wm-dropzone></div>
     <script>
+        //Esta parte faz com que seja possível mover os elementos selecionados
         const items = document.querySelectorAll('[wm-dropzone] .item')
         items.forEach((item, index) => {
             item.draggable = true  //faz com que o item possa ser arrastao pelo mouse
@@ -53,6 +54,7 @@
                 event.dataTransfer.setData('item-id', event.target.id)
         })
 
+        //Esta parte faz com que seja possível soltar o elemento em outra área (sem que ele volte ao seu lugar de origem)
         const dropzones = document.querySelectorAll('[wm-dropzone]')
         dropzones.forEach(dropzone => {
             dropzone.ondragover = event => event.preventDefault()

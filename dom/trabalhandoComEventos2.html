@@ -23,3 +23,23 @@
         }
     </script>
 </body>
+
+<!--
+O código poeria ser escrito também desta forma, a qual é mais legível
+
+<script>
+    const item = document.querySelector('div')
+    item.style.position = 'absolute'
+
+    function moverCaixa(event) { 
+        const item = event.target
+        item.style.cursor = 'move'
+        if (event.buttons) {
+            item.style.top = `${event.clientY - (item.clientHeight / 2)}px`
+            item.style.left = `${event.clientX - (item.clientWidth / 2)}px`
+        }
+    }
+
+    item.onmousemove = moverCaixa
+</script>
+-->

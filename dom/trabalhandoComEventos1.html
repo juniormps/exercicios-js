@@ -12,11 +12,11 @@
         <a href="https://google.com.br">Google</a>
     </div>
     <script>
-        function navegarEm5s(e) {
-            e.preventDefault()
+        function navegarEm5s(event) {
+            event.preventDefault()
             console.log('Saindo em 5s...')
             setTimeout(() => {
-                const link = e.target
+                const link = event.target
                 window.location.href = link.href
             }, 5000)
         }

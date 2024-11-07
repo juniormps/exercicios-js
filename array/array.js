@@ -1,4 +1,4 @@
-/*
+
 
 //ARRAYS
 
@@ -63,7 +63,8 @@ console.log(aprovados)
 aprovados.splice(2, 0, 'elemento3')
 console.log(aprovados)
 
-*/
+
+/*
 
 //historico.innerHTML = historico.innerHTML.slice(0, - (tamanhoUltimoNumOriginal - 1)) + ultimoNumero
 
@@ -78,6 +79,8 @@ const float1 = parseFloat(str1).toString()
 historico = historico.slice(0 , - tamanhoStr1) + float1
 
 console.log(historico)
+
+*/
 
 
 

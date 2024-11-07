@@ -23,3 +23,7 @@ console.log(`Escola ${escola}!`)  //Esta forma se chama "TEMPLATE STRINGS"
 console.log(escola.replace(3, 'e'))  //A função "replace" substitui o caracter do indice selecionado pelo novo caracter informado.
 
 console.log("Ana,Maria,Pedro".split(','))  //A função "split" transforma uma string em um Array. A vírgula entre os parênteses é onde se deseja que seja feita a divisão.
+
+
+const str = ""
+console.log(parseFloat(str).toString())

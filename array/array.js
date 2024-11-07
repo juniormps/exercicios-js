@@ -1,3 +1,5 @@
+/*
+
 //ARRAYS
 
 //Em javascript, o typeof de array é "Object"
@@ -60,3 +62,35 @@ console.log(aprovados)
 //Aqui não será removido nenhum elemento e adicionado mais um
 aprovados.splice(2, 0, 'elemento3')
 console.log(aprovados)
+
+*/
+
+//historico.innerHTML = historico.innerHTML.slice(0, - (tamanhoUltimoNumOriginal - 1)) + ultimoNumero
+
+let historico = "520+23.5000"
+
+const str1 = "23.5000"
+
+const tamanhoStr1 = str1.length
+
+const float1 = parseFloat(str1).toString()
+
+historico = historico.slice(0 , - tamanhoStr1) + float1
+
+console.log(historico)
+
+
+
+
+
+
+
+/*
+const int1 = parseInt(str1)
+console.log(int1)
+
+const float1 = parseFloat(str1).toString()
+console.log(float1)
+
+console.log(typeof float1)
+*/

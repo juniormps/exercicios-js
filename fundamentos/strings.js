@@ -25,5 +25,19 @@ console.log(escola.replace(3, 'e'))  //A função "replace" substitui o caracter
 console.log("Ana,Maria,Pedro".split(','))  //A função "split" transforma uma string em um Array. A vírgula entre os parênteses é onde se deseja que seja feita a divisão.
 
 
-const str = ""
+let str = ""
 console.log(parseFloat(str).toString())
+
+str = "Juniorrrr"
+let str2 = str.slice(2)
+console.log(str2)
+
+let str3 = str.split("").filter(caracter => caracter === "r")
+let quantidadeLetraR = str3.length
+console.log(quantidadeLetraR)
+
+let str4 = "Junio"
+for (let i = 1; i <= quantidadeLetraR; i++) {
+    str4 += "r"
+}
+console.log(str4)

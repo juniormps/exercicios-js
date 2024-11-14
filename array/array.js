@@ -97,3 +97,15 @@ console.log(float1)
 
 console.log(typeof float1)
 */
+
+
+const nomes = []
+nomes.push("Marcio", "Alda", "Sabrina", "Junior")
+
+console.log(nomes)
+
+nomes.pop()
+
+console.log(nomes)
+
+console.log(nomes[nomes.length - 1])
